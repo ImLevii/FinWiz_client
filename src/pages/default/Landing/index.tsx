@@ -1,6 +1,8 @@
 // EXTERNAL
 import { useAuth0 } from '@auth0/auth0-react';
 import { useNavigate } from 'react-router-dom';
+import { TickerTape } from 'react-ts-tradingview-widgets';
+
 // IMAGES
 import Icons from 'assets/icons';
 // Styles
@@ -13,30 +15,35 @@ const Landing = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="landingContainer">
-      <div className="landingCenter">
-        <img className="landingLogo" src={SiteLogoSvg} alt="finwiz-logo" />
+    <div className='landingContainer'>
+      <div className='landingCenter'>
+        <img className='landingLogo' src='https://i.imgur.com/9zknDoB.png' />
         {/* <h2 className='landingTag'>Welcome to FinWiz</h2> */}
         <h3>
-        In the modern era of investing, keeping track of your portfolio can be overwhelming.
-        Having investments shared across multiple applications is not a sustainable way of
-        tracking your finances. We at FinWiz decided to change this.
+          In the modern era of investing, keeping track of your portfolio can be overwhelming.
+          Having investments shared across multiple applications is not a sustainable way of
+          tracking your finances. We at FinWiz decided to change this.
         </h3>
         <h3>
-        FinWiz is a place for you
-        to regain control of your financial portfolio. Using our modern investment tracking
-        tools you will be able to have a better overview of the most applicable markets to
-        suit your investment needs. Invest smart, track with FinWiz.
+          FinWiz is a place for you to regain control of your financial portfolio. Using our modern
+          investment tracking tools you will be able to have a better overview of the most
+          applicable markets to suit your investment needs. Invest smart, track with FinWiz.
         </h3>
 
-        <div className="landingButtons">
-          {!user &&
-          <button className='landingButton' onClick={loginWithRedirect}>Login</button>
-          }
-          {user &&
-          <button className='landingButton' onClick={() => navigate('/profile')}>Profile</button>
-          }
-          <button className='landingButton buttonRight' onClick={() => navigate('/about')}>About</button>
+        <div className='landingButtons'>
+          {!user && (
+            <button className='landingButton' onClick={loginWithRedirect}>
+              Login
+            </button>
+          )}
+          {user && (
+            <button className='landingButton' onClick={() => navigate('/profile')}>
+              Profile
+            </button>
+          )}
+          <button className='landingButton buttonRight' onClick={() => navigate('/about')}>
+            About
+          </button>
         </div>
       </div>
     </div>
