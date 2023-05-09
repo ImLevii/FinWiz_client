@@ -20,7 +20,7 @@ const menuStyle = {
 export const NavLogoIcon = () => (
   <div className='nav-logo'>
     <Link to='/'>
-      <img src={SiteLogoSvg} alt='site-logo' className='nav-logo-img' />
+      <img src='https://i.imgur.com/9zknDoB.png' alt='site-logo' className='nav-logo-img' />
     </Link>
   </div>
 );
